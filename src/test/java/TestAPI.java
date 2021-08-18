@@ -13,15 +13,15 @@ public class TestAPI {
 
     given()
         .relaxedHTTPSValidation()
-        .param("foo1", "bar1")
-        .param("foo2", "bar2")
+        .param("foo", "bar" +
+                "")
     .when()
         .get(uriBase)
     .then()
-        .statusCode(200) // O status http retornado foi 200
-        .contentType(ContentType.JSON) // O response foi retornado no formato JSON
-        .body("headers.host", is("postman-echo.com")) // A chave "host" possui exatamente o valor "postman-echo.com"
-        .body("args.foo1", containsString("bar")) //A chave "foo1" contém o valor "bar"
-        .body( "headers.x-forwarded-proto", containsString("http"));
+        .statusCode(200) // Verifica se o status retornado foi 200
+        .contentType(ContentType.JSON) // Verifica se o response retornado esta formato JSON
+        .body("headers.host", is("postman-echo.com")) // Verifica se a chave "host" possui exatamente o valor "postman-echo.com"
+        .body("args.foo", containsString("bar")) // Verifica se a chave "foo" contém o valor "bar"
+        .body( "headers.x-forwarded-proto", containsString("http")); // Verifica se a chave "x-forwarded-proto" contém o valor "http"
     }
 }
