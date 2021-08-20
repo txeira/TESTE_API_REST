@@ -15,7 +15,7 @@ public class Teste_API_Postman {
         .relaxedHTTPSValidation()
         .param("foo", "bar")
     .when()
-        .get(uriBase)
+        .get(uriBase)// tipo de requisição 
     .then()
         .statusCode(200) // Verifica se o status retornado foi 200
         .contentType(ContentType.JSON) // Verifica se o response retornado esta formato JSON
