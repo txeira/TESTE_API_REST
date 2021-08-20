@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.*;
 import org.junit.Test;
 
 
-public class TestAPI {
+public class Teste_API_Postman {
 
     @Test
     public void Teste() {
