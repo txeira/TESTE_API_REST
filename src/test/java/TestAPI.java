@@ -13,8 +13,7 @@ public class TestAPI {
 
     given()
         .relaxedHTTPSValidation()
-        .param("foo", "bar" +
-                "")
+        .param("foo", "bar")
     .when()
         .get(uriBase)
     .then()
