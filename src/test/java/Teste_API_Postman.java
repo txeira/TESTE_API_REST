@@ -15,12 +15,12 @@ public class Teste_API_Postman {
         .relaxedHTTPSValidation()
         .param("foo", "bar")
     .when()
-        .get(uriBase)// tipo de requisição 
+        .get(uriBase)// tipo de requisição.
     .then()
-        .statusCode(200) // Verifica se o status retornado foi 200
-        .contentType(ContentType.JSON) // Verifica se o response retornado esta formato JSON
-        .body("headers.host", is("postman-echo.com")) // Verifica se a chave "host" possui exatamente o valor "postman-echo.com"
-        .body("args.foo", containsString("bar")) // Verifica se a chave "foo" contém o valor "bar"
-        .body( "headers.x-forwarded-proto", containsString("http")); // Verifica se a chave "x-forwarded-proto" contém o valor "http"
+        .statusCode(200) // Verifica se o status retornado foi 200.
+        .contentType(ContentType.JSON) // Verifica se o response retornado esta formato JSON.
+        .body("headers.host", is("postman-echo.com")) // Verifica se a chave "host" possui exatamente o valor "postman-echo.com".
+        .body("args.foo", containsString("bar")) // Verifica se a chave "foo" contém o valor "bar".
+        .body( "headers.x-forwarded-proto", containsString("http")); // Verifica se a chave "x-forwarded-proto" contém o valor "http".
     }
 }
